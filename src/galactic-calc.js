@@ -48,21 +48,27 @@ constructor() {
 
   mercuryLECalc() {
     this.mercuryLE = (.24 * this.earthLifeExpectancy);
-    this.mercuryYL = (this.mercuryLE - this.mercuyAge);
+    this.mercuryYL = (this.mercuryLE - this.mercuryAge);
   }
   venusLECalc() {
     this.venusLE = (.62 * this.earthLifeExpectancy);
+    this.venusYL = (this.venusLE - this.mercuryAge);
   }
   marsLECalc() {
     this.marsLE = (1.88 * this.earthLifeExpectancy);
+    this.marsYL = (this.marsLE - this.marsAge);
   }
   jupiterLECalc() {
     this.jupiterLE = (11.86 * this.earthLifeExpectancy);
-
+    this.jupiterYL = (this.jupiterLE - this.jupiterAge);
   }
 
+
+
+
+
   // mercuryYLCalc() {
-  //   this.mercuryYL = (this.mercuryLE - this.mercuyAge);
+  //   this.mercuryYL = (this.mercuryLE) - (this.mercuryAge);
   //
   // }
 
