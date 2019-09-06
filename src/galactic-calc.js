@@ -31,6 +31,13 @@ constructor() {
   this.marsYL = [];
   this.jupiterYL = [];
 
+//years-left
+  this.mercuryReturn = [];
+  this.venusReturn = [];
+  this.marsReturn = [];
+  this.jupiterReturn = [];
+
+
   }
   mercuryAgeCalc() {
     this.mercuryAge = this.earthAge * .24;
@@ -49,58 +56,38 @@ constructor() {
     this.mercuryLE = (.24 * this.earthLifeExpectancy);
     this.mercuryYL = (this.mercuryLE - this.mercuryAge);
     if (this.mercuryYL < 0) {
-      console.log("Less than 1")
-      console.log('You have exceded you life expectancy by' + Math.abs(this.mercuryYL) + ' years.')
+      this.mercuryReturn = ('You have exceded your life expectancy by ' + Math.abs(this.mercuryYL) + ' years. Congratulations!!');
     } else {
-      console.log('You have ' + this.mercuryYL + ' years left on Mercury.')
-      console.log("More than 1")
-
+      this.mercuryReturn = ('You have ' + this.mercuryYL + ' years left on Mercury.')
     };
   }
   venusLECalc() {
     this.venusLE = (.62 * this.earthLifeExpectancy);
     this.venusYL = (this.venusLE - this.venusAge);
+    if (this.venusYL < 0) {
+      this.venusReturn = ('You have exceded your life expectancy by ' + Math.abs(this.venusYL) + ' years. Congratulations!!')
+    } else {
+      this.venusReturn = ('You have ' + this.venusYL + ' years left on Venus.')
+    };
   }
   marsLECalc() {
     this.marsLE = (1.88 * this.earthLifeExpectancy);
     // I found this workaround on stackoverflow. toFixed(2) was returns a string and I couldn't have that!
     this.marsYL = Math.round((this.marsLE - this.marsAge) * 1e2) / 1e2;
+    if (this.marsYL < 0) {
+      this.marsReturn = ('You have exceded your life expectancy by ' + Math.abs(this.marsYL) + ' years. Congratulations!!')
+    } else {
+      this.marsReturn = ('You have ' + this.marsYL + ' years left on Mars.')
+    };
+
   }
   jupiterLECalc() {
     this.jupiterLE = (11.86 * this.earthLifeExpectancy);
     this.jupiterYL = (this.jupiterLE - this.jupiterAge);
+    if (this.jupiterYL < 0) {
+      this.jupiterReturn = ('You have exceded your life expectancy by ' + Math.abs(this.jupiterYL) + ' years. Congratulations!!')
+    } else {
+      this.jupiterReturn = ('You have ' + this.jupiterYL + ' years left on Jupiter.')
+    };
   };
 };
-
-
-
-
-
-
-// function yearsLeft () {
-//   if (this.mercuryYL < 1) {
-//     console.log("Less than 1")
-//
-//     console.log('You have exceded you life expectancy by' + this.mercuryYL + ' years.')
-// } else {
-//   console.log('You have ' + this.mercuryYL + ' years left on Mercury.')
-//   console.log("More than 1")
-//
-// };
-// };
-
-// if (this.venusYL<0) {
-  //   "You have exceded your life expectancy by" Math.abs(${this.venusYL}) "years."
-  // } else {
-    // "You have ${this.venusYL} years left on Venus."
-    // };
-    // if (this.marsYL<0) {
-      //   "You have exceded your life expectancy by" Math.abs(${this.marsYL}) "years."
-      // } else {
-        // "You have ${this.marsYL} years left on Mars."
-        // };
-        // if (this.jupiterYL<0) {
-          //   "You have exceded your life expectancy by" Math.abs(${this.jupiterYL}) "years."
-          // } else {
-            // "You have ${this.jupiterYL} years left on Jupiter."
-            // };
