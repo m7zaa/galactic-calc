@@ -1,12 +1,13 @@
-
 import $ from 'jquery';
-import {Galactic} from './galactic-calc';
+import {
+  Galactic
+} from './galactic-calc';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-  // import './styles.css';
+// import './styles.css';
 
 $(document).ready(function() {
-  $("#form1").submit(function(event){
+  $("#form1").submit(function(event) {
     event.preventDefault();
     let earthling = new Galactic($("input#earthAge1").val());
     console.log(earthling);
@@ -16,7 +17,7 @@ $(document).ready(function() {
     $("#returnMessage1").text(earthling.mercuryReturn);
   });
 
-  $("#form2").submit(function(event){
+  $("#form2").submit(function(event) {
     event.preventDefault();
     let earthling2 = new Galactic($("input#earthAge2").val());
     console.log(earthling2);
@@ -26,7 +27,7 @@ $(document).ready(function() {
     $("#returnMessage2").text(earthling2.venusReturn);
   });
 
-  $("#form3").submit(function(event){
+  $("#form3").submit(function(event) {
     event.preventDefault();
     let earthling3 = new Galactic($("input#earthAge3").val());
     console.log(earthling3);
@@ -37,7 +38,7 @@ $(document).ready(function() {
   });
 
 
-  $("#form4").submit(function(event){
+  $("#form4").submit(function(event) {
     event.preventDefault();
     let earthling4 = new Galactic($("input#earthAge4").val());
     console.log(earthling4);

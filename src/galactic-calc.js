@@ -1,41 +1,43 @@
 // Back-end
 
- export function userAge(input) {
+export function userAge(input) {
   if (input === NaN) {
-        return false;
-    } else {
-      return true;
-    }
+    return false;
+  } else {
+    return true;
+  }
 };
 
 
 export class Galactic {
-constructor(age) {
-  this.earthAge = age;
-  this.earthLifeExpectancy = 100;
+  constructor(age) {
+    //for ui to work, you need to exchange line 16 for line 15.
+    // this.earthAge = age;
+    this.earthAge = 33; 
+    this.earthLifeExpectancy = 100;
 
-  this.mercuryAge = [];
-  this.venusAge = [];
-  this.marsAge = [];
-  this.jupiterAge = [];
+    this.mercuryAge = [];
+    this.venusAge = [];
+    this.marsAge = [];
+    this.jupiterAge = [];
 
-//life expectancies
-  this.mercuryLE = [];
-  this.venusLE = [];
-  this.marsLE = [];
-  this.jupiterLE = [];
+    //life expectancies
+    this.mercuryLE = [];
+    this.venusLE = [];
+    this.marsLE = [];
+    this.jupiterLE = [];
 
-//years-left
-  this.mercuryYL = [];
-  this.venusYL = [];
-  this.marsYL = [];
-  this.jupiterYL = [];
+    //years-left
+    this.mercuryYL = [];
+    this.venusYL = [];
+    this.marsYL = [];
+    this.jupiterYL = [];
 
-//years-left
-  this.mercuryReturn = [];
-  this.venusReturn = [];
-  this.marsReturn = [];
-  this.jupiterReturn = [];
+    //years-left
+    this.mercuryReturn = [];
+    this.venusReturn = [];
+    this.marsReturn = [];
+    this.jupiterReturn = [];
 
 
   }
@@ -58,7 +60,7 @@ constructor(age) {
     if (this.mercuryYL < 0) {
       this.mercuryReturn = ('You have exceded your life expectancy by ' + Math.abs(this.mercuryYL) + ' years. Congratulations!!');
     } else {
-      this.mercuryReturn = ('You have ' + this.mercuryYL + ' years left on to live Mercury.')
+      this.mercuryReturn = ('You have ' + this.mercuryYL + ' years left to live on Mercury.')
     };
   }
   venusLECalc() {
