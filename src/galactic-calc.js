@@ -10,8 +10,8 @@
 
 
 export class Galactic {
-constructor() {
-  this.earthAge = 33;
+constructor(age) {
+  this.earthAge = age;
   this.earthLifeExpectancy = 100;
 
   this.mercuryAge = [];
@@ -58,7 +58,7 @@ constructor() {
     if (this.mercuryYL < 0) {
       this.mercuryReturn = ('You have exceded your life expectancy by ' + Math.abs(this.mercuryYL) + ' years. Congratulations!!');
     } else {
-      this.mercuryReturn = ('You have ' + this.mercuryYL + ' years left on Mercury.')
+      this.mercuryReturn = ('You have ' + this.mercuryYL + ' years left on to live Mercury.')
     };
   }
   venusLECalc() {
@@ -67,7 +67,7 @@ constructor() {
     if (this.venusYL < 0) {
       this.venusReturn = ('You have exceded your life expectancy by ' + Math.abs(this.venusYL) + ' years. Congratulations!!')
     } else {
-      this.venusReturn = ('You have ' + this.venusYL + ' years left on Venus.')
+      this.venusReturn = ('You have ' + this.venusYL + ' years left to live on Venus.')
     };
   }
   marsLECalc() {
@@ -77,7 +77,7 @@ constructor() {
     if (this.marsYL < 0) {
       this.marsReturn = ('You have exceded your life expectancy by ' + Math.abs(this.marsYL) + ' years. Congratulations!!')
     } else {
-      this.marsReturn = ('You have ' + this.marsYL + ' years left on Mars.')
+      this.marsReturn = ('You have ' + this.marsYL + ' years left to live on Mars.')
     };
 
   }
@@ -87,7 +87,7 @@ constructor() {
     if (this.jupiterYL < 0) {
       this.jupiterReturn = ('You have exceded your life expectancy by ' + Math.abs(this.jupiterYL) + ' years. Congratulations!!')
     } else {
-      this.jupiterReturn = ('You have ' + this.jupiterYL + ' years left on Jupiter.')
+      this.jupiterReturn = ('You have ' + this.jupiterYL + ' years left to live on Jupiter.')
     };
   };
 };
