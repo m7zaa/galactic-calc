@@ -52,11 +52,12 @@ constructor() {
   }
   venusLECalc() {
     this.venusLE = (.62 * this.earthLifeExpectancy);
-    this.venusYL = (this.venusLE - this.mercuryAge);
+    this.venusYL = (this.venusLE - this.venusAge);
   }
   marsLECalc() {
     this.marsLE = (1.88 * this.earthLifeExpectancy);
-    this.marsYL = (this.marsLE - this.marsAge);
+    // I found this workaround on stackoverflow. toFixed(2) was returns a string and I couldn't have that!
+    this.marsYL = Math.round((this.marsLE - this.marsAge) * 1e2) / 1e2;
   }
   jupiterLECalc() {
     this.jupiterLE = (11.86 * this.earthLifeExpectancy);

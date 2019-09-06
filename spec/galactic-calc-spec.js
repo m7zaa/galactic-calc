@@ -63,42 +63,33 @@
      expect(myLEOnJupiter.jupiterLE).toEqual(1186);
    });
 
-
-//Pass
+//Years left tests
+  //Pass
    it("it should return years of life left on Mercury.", function() {
      let myYLOnMercury = new Galactic();
      myYLOnMercury.mercuryAgeCalc();
      myYLOnMercury.mercuryLECalc();
      expect(myYLOnMercury.mercuryYL).toEqual(16.08);
    });
-
-
-
-
-
-
+   //Pass
    it("it should return years of life left on Venus.", function() {
      let myYLOnVenus = new Galactic();
      myYLOnVenus.venusAgeCalc();
      myYLOnVenus.venusLECalc();
-     expect(myYLOnVenus.venusYL).toEqual(62);
+     expect(myYLOnVenus.venusYL).toEqual(41.54);
    });
-
+   //Pass
    it("it should return years of life left on Mars.", function() {
      let myYLOnMars = new Galactic();
      myYLOnMars.marsAgeCalc();
      myYLOnMars.marsLECalc();
-     expect(myYLOnMars.marsYL).toEqual(188);
+     expect(myYLOnMars.marsYL).toEqual(125.96);
    });
-
+   //Pass
    it("it should return years of life left on Jupiter.", function() {
      let myYLOnJupiter = new Galactic();
      myYLOnJupiter.jupiterAgeCalc();
      myYLOnJupiter.jupiterLECalc();
-     expect(myYLOnJupiter.jupiterYL).toEqual(1186);
+     expect(myYLOnJupiter.jupiterYL).toEqual(794.62);
    });
-
-
-
-
  });
