@@ -15,29 +15,38 @@ describe ('user input age valid', function() {
     expect(myAge).toEqual(true);
   });
 
-
+  //Pass
   it ("it should return earthAge * 0.24 to determine age on Mercury", function() {
     let myAgeOnMercury = new Galactic();
     myAgeOnMercury.mercuryCalc();
     expect(myAgeOnMercury.mercuryAge).toEqual(7.92);
   });
 
+//Pass
+  it ("it should return earthAge * 0.62 to determine age on Venus", function() {
+    let myAgeOnVenus = new Galactic();
+    myAgeOnVenus.venusCalc();
+    expect(myAgeOnVenus.venusAge).toEqual(20.46);
+  });
+
+  //Pass
+  it ("it should return earthAge * 1.88 to determine age on Mars", function() {
+    let myAgeOnMars = new Galactic();
+    myAgeOnMars.marsCalc();
+    expect(myAgeOnMars.marsAge).toEqual(62.04);
+  });
+
+  //Pass
+  it ("it should return earthAge * 11.86 to determine age on Jupiter", function() {
+    let myAgeOnJupiter = new Galactic();
+    myAgeOnJupiter.jupiterCalc();
+    expect(myAgeOnJupiter.jupiterAge).toEqual(391.38);
+  });
 
 
-  // it ("it should return age*0.62 to calculate age on Venus", function() {
-  //   let myAgeVenus = venusAge(33);
-  //   expect(myAgeVenus).toEqual(20.46);
-  // });
-  //
-  // it ("it should return age*1.88 to calculate age on Mars", function() {
-  //   let myAgeMars = marsAge(33);
-  //   expect(myAgeMars).toEqual(62.04);
-  // });
-  //
-  // it ("it should return age*11.86 to calculate age on Jupiter", function() {
-  //   let myAgeJupiter = JupiterAge(33);
-  //   expect(myAgeJupiter).toEqual(391.38);
-  // });
+
+
+
 
 
 
