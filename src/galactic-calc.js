@@ -33,43 +33,38 @@ constructor() {
 
   }
 
-  mercuryCalc() {
+  mercuryAgeCalc() {
     this.mercuryAge = this.earthAge * .24;
   }
-
-  venusCalc() {
+  venusAgeCalc() {
     this.venusAge = this.earthAge * .62;
   }
-
-  marsCalc() {
+  marsAgeCalc() {
     this.marsAge = this.earthAge * 1.88;
   }
-
-  jupiterCalc() {
+  jupiterAgeCalc() {
     this.jupiterAge = this.earthAge * 11.86;
   }
 
-
-
-
-
   mercuryLECalc() {
     this.mercuryLE = (.24 * this.earthLifeExpectancy);
+    this.mercuryYL = (this.mercuryLE - this.mercuyAge);
   }
-
   venusLECalc() {
     this.venusLE = (.62 * this.earthLifeExpectancy);
   }
-
   marsLECalc() {
     this.marsLE = (1.88 * this.earthLifeExpectancy);
   }
-
   jupiterLECalc() {
     this.jupiterLE = (11.86 * this.earthLifeExpectancy);
+
   }
 
-
+  // mercuryYLCalc() {
+  //   this.mercuryYL = (this.mercuryLE - this.mercuyAge);
+  //
+  // }
 
 
 
