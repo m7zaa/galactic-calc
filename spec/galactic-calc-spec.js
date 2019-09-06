@@ -1,4 +1,5 @@
  import { userAge } from './../src/galactic-calc.js';
+ import { Galactic } from './../src/galactic-calc.js';
 
 describe ('user input age valid', function() {
 
@@ -15,27 +16,28 @@ describe ('user input age valid', function() {
   });
 
 
-  it ("it should return age*0.24 to calculate age on Mercury", function() {
-    let myAgeMercury = mercuryAge(33);
-    expect(myAgeMercury).toEqual(7.92);
+  it ("it should return earthAge * 0.24 to determine age on Mercury", function() {
+    let myAgeOnMercury = new Galactic();
+    myAgeOnMercury.mercuryCalc();
+    expect(myAgeOnMercury.mercuryAge).toEqual(7.92);
   });
 
 
 
-  it ("it should return age*0.62 to calculate age on Venus", function() {
-    let myAgeVenus = venusAge(33);
-    expect(myAgeVenus).toEqual(20.46);
-  });
-
-  it ("it should return age*1.88 to calculate age on Mars", function() {
-    let myAgeMars = marsAge(33);
-    expect(myAgeMars).toEqual(62.04);
-  });
-
-  it ("it should return age*11.86 to calculate age on Jupiter", function() {
-    let myAgeJupiter = JupiterAge(33);
-    expect(myAgeJupiter).toEqual(391.38);
-  });
+  // it ("it should return age*0.62 to calculate age on Venus", function() {
+  //   let myAgeVenus = venusAge(33);
+  //   expect(myAgeVenus).toEqual(20.46);
+  // });
+  //
+  // it ("it should return age*1.88 to calculate age on Mars", function() {
+  //   let myAgeMars = marsAge(33);
+  //   expect(myAgeMars).toEqual(62.04);
+  // });
+  //
+  // it ("it should return age*11.86 to calculate age on Jupiter", function() {
+  //   let myAgeJupiter = JupiterAge(33);
+  //   expect(myAgeJupiter).toEqual(391.38);
+  // });
 
 
 

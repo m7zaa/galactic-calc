@@ -1,6 +1,6 @@
 // Back-end
 
- function userAge(input) {
+ export function userAge(input) {
   if (input > 0 && input<1000000 || input=== NaN) {
         return true;
     } else {
@@ -12,12 +12,12 @@
 
 
 
-class Galactic {
+export class Galactic {
 constructor() {
-  this.age = 33;
+  this.earthAge = 33;
   this.mercuryAge = []
   }
   mercuryCalc() {
-    this.mercuryAge = this.age * .24;
+    this.mercuryAge = this.earthAge * .24;
   }
 };
