@@ -9,16 +9,21 @@
 };
 
 
-
-
-
 export class Galactic {
 constructor() {
   this.earthAge = 33;
+  this.earthLifeExpectancy = 100;
+
   this.mercuryAge = [];
   this.venusAge = [];
   this.marsAge = [];
   this.jupiterAge = [];
+
+  this.mercuryLE = [];
+  this.venusLE = [];
+  this.marsLE = [];
+  this.jupiterLE = [];
+
   }
 
   mercuryCalc() {
@@ -36,5 +41,31 @@ constructor() {
   jupiterCalc() {
     this.jupiterAge = this.earthAge * 11.86;
   }
+
+
+
+
+
+  mercuryLECalc() {
+    this.mercuryLE = this.mercuryAge * (.24 * this.earthLifeExpectancy);
+  }
+
+  venusLECalc() {
+    this.venusLE = this.venusAge * (.62 * this.earthLifeExpectancy);
+  }
+
+  marsLECalc() {
+    this.marsLE = this.marsAge * (1.88 * this.earthLifeExpectancy);
+  }
+
+  jupiterLECalc() {
+    this.jupiterLE = this.jupiterAge * (11.86 * this.earthLifeExpectancy);
+  }
+
+
+
+
+
+
 
 };
