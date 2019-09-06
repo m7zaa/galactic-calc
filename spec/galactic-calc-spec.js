@@ -3,17 +3,12 @@
 
 describe ('user input age valid', function() {
 
-//Pass
-  it ("it should respond as 'false' if syntax is incorrect", function() {
-    let myAge = userAge("three");
-    expect(myAge).toEqual(false);
-  });
 
   //Pass
-  it ("it should respond as 'true' if syntax is correct", function() {
-    let myAge = userAge(33);
-    expect(myAge).toEqual(true);
-  });
+  // it ("it should respond as 'true' if syntax is correct", function() {
+  //   let myAge = userAge(33);
+  //   expect(myAge).toEqual(true);
+  // });
 
   //Pass
   it ("it should return earthAge * 0.24 to determine age on Mercury", function() {
@@ -44,7 +39,11 @@ describe ('user input age valid', function() {
   });
 
 
-
+  it ("it should return life expectancy on Mercury (.24 * 100)", function() {
+    let myLEOnMercury = new Galactic();
+    myLEOnMercury.mercuryLECalc();
+    expect(myLEOnMercury.mercuryLE).toEqual(24);
+  });
 
 
 

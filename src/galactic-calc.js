@@ -1,10 +1,10 @@
 // Back-end
 
  export function userAge(input) {
-  if (input > 0 && input<1000000 || input=== NaN) {
-        return true;
+  if (input === NaN) {
+        return false;
     } else {
-      return false;
+      return true;
     }
 };
 
@@ -19,10 +19,17 @@ constructor() {
   this.marsAge = [];
   this.jupiterAge = [];
 
+//life expectancies
   this.mercuryLE = [];
   this.venusLE = [];
   this.marsLE = [];
   this.jupiterLE = [];
+
+//years-left
+  this.mercuryYL = [];
+  this.venusYL = [];
+  this.marsYL = [];
+  this.jupiterYL = [];
 
   }
 
@@ -47,19 +54,19 @@ constructor() {
 
 
   mercuryLECalc() {
-    this.mercuryLE = this.mercuryAge * (.24 * this.earthLifeExpectancy);
+    this.mercuryLE = (.24 * this.earthLifeExpectancy);
   }
 
   venusLECalc() {
-    this.venusLE = this.venusAge * (.62 * this.earthLifeExpectancy);
+    this.venusLE = (.62 * this.earthLifeExpectancy);
   }
 
   marsLECalc() {
-    this.marsLE = this.marsAge * (1.88 * this.earthLifeExpectancy);
+    this.marsLE = (1.88 * this.earthLifeExpectancy);
   }
 
   jupiterLECalc() {
-    this.jupiterLE = this.jupiterAge * (11.86 * this.earthLifeExpectancy);
+    this.jupiterLE = (11.86 * this.earthLifeExpectancy);
   }
 
 
