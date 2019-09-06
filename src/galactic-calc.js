@@ -48,6 +48,14 @@ constructor() {
   mercuryLECalc() {
     this.mercuryLE = (.24 * this.earthLifeExpectancy);
     this.mercuryYL = (this.mercuryLE - this.mercuryAge);
+    if (this.mercuryYL < 0) {
+      console.log("Less than 1")
+      console.log('You have exceded you life expectancy by' + Math.abs(this.mercuryYL) + ' years.')
+    } else {
+      console.log('You have ' + this.mercuryYL + ' years left on Mercury.')
+      console.log("More than 1")
+
+    };
   }
   venusLECalc() {
     this.venusLE = (.62 * this.earthLifeExpectancy);
@@ -69,25 +77,30 @@ constructor() {
 
 
 
-function yearsLeft () {
-  if (this.mercuryYL<0) {
-    console.log("You have exceded your life expectancy by " + this.mercuryYL + " years.")
-} else {
-  console.log("You have " + this.mercuryYL + " years left on Mercury.")
-};
+// function yearsLeft () {
+//   if (this.mercuryYL < 1) {
+//     console.log("Less than 1")
+//
+//     console.log('You have exceded you life expectancy by' + this.mercuryYL + ' years.')
+// } else {
+//   console.log('You have ' + this.mercuryYL + ' years left on Mercury.')
+//   console.log("More than 1")
+//
+// };
+// };
+
 // if (this.venusYL<0) {
-//   "You have exceded your life expectancy by" Math.abs(${this.venusYL}) "years."
-// } else {
-// "You have ${this.venusYL} years left on Venus."
-// };
-// if (this.marsYL<0) {
-//   "You have exceded your life expectancy by" Math.abs(${this.marsYL}) "years."
-// } else {
-// "You have ${this.marsYL} years left on Mars."
-// };
-// if (this.jupiterYL<0) {
-//   "You have exceded your life expectancy by" Math.abs(${this.jupiterYL}) "years."
-// } else {
-// "You have ${this.jupiterYL} years left on Jupiter."
-// };
-};
+  //   "You have exceded your life expectancy by" Math.abs(${this.venusYL}) "years."
+  // } else {
+    // "You have ${this.venusYL} years left on Venus."
+    // };
+    // if (this.marsYL<0) {
+      //   "You have exceded your life expectancy by" Math.abs(${this.marsYL}) "years."
+      // } else {
+        // "You have ${this.marsYL} years left on Mars."
+        // };
+        // if (this.jupiterYL<0) {
+          //   "You have exceded your life expectancy by" Math.abs(${this.jupiterYL}) "years."
+          // } else {
+            // "You have ${this.jupiterYL} years left on Jupiter."
+            // };
